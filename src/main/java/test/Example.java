@@ -20,7 +20,7 @@ public class Example {
 
     @RequestMapping("/feature2")
     String feature2() {
-        return "I just wanted to create a feature number 2";
+        return "I just wanted to create a feature number 2 a";
     }
 
     public static void main(String[] args) throws Exception {
