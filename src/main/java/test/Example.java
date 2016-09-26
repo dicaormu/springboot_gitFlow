@@ -15,13 +15,16 @@ public class Example {
 
     @RequestMapping("/feature")
     String feature() {
-        return "I just wanted to create a feature";
+        return "I just wanted to create first feature";
     }
 
     @RequestMapping("/feature2")
     String feature2() {
         return "I just wanted to create a feature number 2";
     }
+
+
+
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(Example.class, args);
