@@ -15,7 +15,7 @@ public class Example {
 
     @RequestMapping("/feature")
     String feature() {
-        return "I just wanted to create a feature 00";
+        return "I just wanted to create first feature";
     }
 
     @RequestMapping("/feature2")
