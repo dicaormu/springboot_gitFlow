@@ -23,10 +23,7 @@ public class Example {
         return "I just wanted to create a feature number 2";
     }
 
-    @RequestMapping("/feature3")
-    String feature3() {
-        return "I just wanted to create a feature number 3 a";
-    }
+
 
 
     public static void main(String[] args) throws Exception {
