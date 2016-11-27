@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+
+  ServerName uat.example.com
+  ServerAlias uat.example.com
+
+  ProxyPreserveHost On
+  ProxyPass        / http://example.com:1013/
+  ProxyPassReverse / http://examplne.com:1013/
+
+  SetEnv force-proxy-request-1.0 1
+  SetEnv proxy-nokeepalive 1
+
+</VirtualHost>

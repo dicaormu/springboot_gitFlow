@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+
+	ServerName artifactory.artel-solutions.com
+	ServerAlias artifactory.artel-solutions.com
+
+	ServerAdmin webmaster@localhost
+        
+   	ProxyPreserveHost On
+   	ProxyPass        / http://boot2docker:8090/ nocanon
+   	ProxyPassReverse / http://boot2docker:8090/
+
+	AllowEncodedSlashes NoDecode
+
+</VirtualHost>
+
