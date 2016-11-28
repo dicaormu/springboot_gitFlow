@@ -59,7 +59,7 @@
                     </flowInitContext>
                 </configuration>
             </plugin-->
-            <plugin>
+            <!--plugin>
                 <groupId>com.amashchenko.maven.plugin</groupId>
                 <artifactId>gitflow-maven-plugin</artifactId>
                 <version>1.3.1</version>
@@ -77,6 +77,32 @@
                         <origin>origin</origin>
                     </gitFlowConfig>
                 </configuration>
+            </plugin-->
+            <plugin>
+                <groupId>com.e-gineering</groupId>
+                <artifactId>gitflow-helper-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <!-- These repository definitions expect id::layout::url::unique, for example
+                         release::default::https://some.server.path/content/repositories/test-releases::false
+                    -->
+                    <releaseDeploymentRepository>release/</releaseDeploymentRepository>
+                    <snapshotDeploymentRepository>develop</snapshotDeploymentRepository>
+                    <stageDeploymentRepository>hotfix/</stageDeploymentRepository>
+                    <!-- The plugin will read the git branch ang git url by resolving these properties at run-time -->
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>enforce-versions</goal>
+                            <goal>retarget-deploy</goal>
+                            <goal>tag-master</goal>
+                            <goal>promote-master</goal>
+                            <goal>set-properties</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
