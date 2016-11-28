@@ -5,7 +5,7 @@
 
     <groupId>fr.xebia.test</groupId>
     <artifactId>springBootExample</artifactId>
-    <version>1.4-SNAPSHOT</version>
+    <version>1.4</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
